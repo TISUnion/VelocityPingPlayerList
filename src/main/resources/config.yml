@@ -1,0 +1,9 @@
+enabled: true
+
+# classic, grouped
+mode: classic
+
+max_displayed_server: 3
+max_displayed_player_per_server: 3
+sort_server: true
+sort_player: true
