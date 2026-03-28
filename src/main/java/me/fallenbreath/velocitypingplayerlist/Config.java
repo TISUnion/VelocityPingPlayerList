@@ -1,6 +1,7 @@
 package me.fallenbreath.velocitypingplayerlist;
 
 import org.slf4j.Logger;
+import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
 
@@ -50,7 +51,7 @@ public class Config
 
 		try
 		{
-			Yaml yaml = new Yaml(new Constructor(ConfigData.class));
+			Yaml yaml = new Yaml(new Constructor(ConfigData.class, new LoaderOptions()));
 			this.configData = yaml.loadAs(Files.readString(file.toPath()), ConfigData.class);
 		}
 		catch (Exception e)
